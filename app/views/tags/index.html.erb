@@ -1,0 +1,6 @@
+<ul class="tags">
+  <%= content_tag_for :li, @tags do |tag| %>
+    <%= link_to tag.name, tag_path(tag) %> |
+    <%= link_to "delete", tag_path(tag), method: :delete, data: {confirm: "Are you sure?"} %>
+  <% end %>
+</ul>

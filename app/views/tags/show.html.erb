@@ -1,0 +1,8 @@
+<h1>Articles taged with <%= @tag.name %></h1>
+<%= content_tag_for :ul, @tag do %>
+  <% @tag.articles.each do |article| %>
+    <li>
+      <%= link_to article.title, article_path(article) %>
+    </li>
+  <% end %>
+<% end %>
